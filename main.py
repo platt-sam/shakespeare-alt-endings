@@ -5,6 +5,7 @@ from datetime import date, datetime
 from os import path
 from transformers import pipeline
 
+# plays that can be selected and the file that the script is in
 plays = {
     "Hamlet":"hamlet.txt",
     "King Lear":"king_lear.txt",
@@ -39,22 +40,23 @@ def textgeneration(name):
         exit("A prompt was not entered.")
     
     filename = plays[name]
-    f = open("scripts/" + filename, "r")
-    prompt = f.read()
-    f.close()
+    file = open("scripts/" + filename, "r")
+    prompt = file.read() # read the contents of the file
+    file.close()
 
     if len(prompt) > 1024: # Ensure input length is less than the maximum accepted by model
         prompt = prompt[0:1023]
 
     classifier = pipeline("text-generation")
-    result = str(classifier(prompt, max_length=1024)[0]['generated_text'])
+    result = str(classifier(prompt, max_length=1024)[0]['generated_text']) # generate an alternate ending
 
-    fname = ('alternate ending_' + name + '_' + str(date.today()) + '_' + datetime.now().strftime('%H-%M-%S') + '.txt')
-    outputfile = open(fname, "w")
+    # save result to a file
+    outputfilename = ('alternate ending_' + name + '_' + str(date.today()) + '_' + datetime.now().strftime('%H-%M-%S') + '.txt') # generate a filename based on the play and datetime
+    outputfile = open(outputfilename, "w")
     outputfile.write(result)
     outputfile.close()
 
-    return result, fname
+    return result, outputfilename
 
 def app():
     # All the stuff inside your window
@@ -63,7 +65,6 @@ def app():
     layoutcontent = [
         [sg.Text('Choose a Play:'), sg.Combo(playnames, enable_events=True, readonly=False, key='-PLAYS-')],
         [sg.Text('', key='-RESULT-')],
-        #[sg.Column(layout='', key='-RESULT-', size=(300,None), scrollable=True)],
     ]
 
     # Create the Window
@@ -78,8 +79,10 @@ def app():
         res = textgeneration(playname)
         generatedresult = res[0]
         filename = res[1]
+
+        print("\n\n\n" + generatedresult)
         
-        window['-RESULT-'].update("Results saved to " + filename)
+        window['-RESULT-'].update("Results printed to terminal and saved to " + filename)
 
     window.close()
 
