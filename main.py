@@ -27,10 +27,12 @@ def setup():
     os.system("pip3 install -r requirements.txt")
 
 def textgeneration(prompt):
-    if len(prompt) == 0:
+    if len(prompt) == 0: # Ensure a prompt was entered
         exit("A prompt was not entered.")
+    if len(prompt) > 1024: # Ensure input length is less than the maximum accepted by model
+        prompt = prompt[0:1023]
     classifier = pipeline("text-generation")
-    result = str(classifier(prompt, max_length=250)[0]['generated_text'])
+    result = str(classifier(prompt, max_length=1024)[0]['generated_text'])
     txt = "{0}\n\n{1}"
     return txt.format(prompt,result)
 
