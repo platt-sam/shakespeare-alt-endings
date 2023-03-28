@@ -1,4 +1,4 @@
-# sam-souhackathon2023
+# Shakespeare Alternate Ending Generator
 
 This is my project for SOU Hackathon 2023. GitHub doesn't allow users to fork their own repositories.
 
