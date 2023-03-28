@@ -51,7 +51,7 @@ def textgeneration(name):
     result = str(classifier(prompt, max_length=1024)[0]['generated_text']) # generate an alternate ending
 
     # save result to a file
-    outputfilename = ('alternate ending_' + name + '_' + str(date.today()) + '_' + datetime.now().strftime('%H-%M-%S') + '.txt') # generate a filename based on the play and datetime
+    outputfilename = ('alternate_ending_' + name + '_' + str(date.today()) + '_' + datetime.now().strftime('%H-%M-%S') + '.txt') # generate a filename based on the play and datetime
     outputfile = open(outputfilename, "w")
     outputfile.write(result)
     outputfile.close()
@@ -82,7 +82,7 @@ def app():
 
         print("\n\n\n" + generatedresult)
         
-        window['-RESULT-'].update("Results printed to terminal and saved to " + filename)
+        window['-RESULT-'].update("Results printed to terminal and saved to\n" + filename)
 
     window.close()
 
