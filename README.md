@@ -28,7 +28,7 @@ I used PySimpleGUI to create the GUI for this app.
 
 1. Clone this project onto your machine. In a terminal on your computer, enter this command:
 
-    `git clone https://github.com/platt-sam/sam-souhackathon2023.git`
+    `git clone https://github.com/platt-sam/shakespeare-alt-endings.git`
 
 2. Check that you have Python (v 3.x) installed on your computer. In a terminal, enter the command:
 
