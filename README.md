@@ -2,6 +2,8 @@
 
 This is my project for SOU Hackathon 2023. GitHub doesn't allow users to fork their own repositories.
 
+As I am the President of SOU's Computer Science Club, this project is ineligible to win SOU Hackathon 2023.
+
 If you would like to see other participants' projects, the main repository is https://github.com/platt-sam/souhackathon2023.
 
 ## Purpose
