@@ -1,2 +1,5 @@
 transformers
 PySimpleGUI
+torch
+torchvision
+torchaudio
