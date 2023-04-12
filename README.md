@@ -48,7 +48,7 @@ I used PySimpleGUI to create the GUI for this app.
 
 `pip3 install -r requirements-linux.txt` (Linux)
 
-5. From inside the `shakespeare-alternate-endings` folder, follow the usage guide below to run the project. Please understand that it may take up to a few minutes to run this program depending on your CPU specifications.
+5. From inside the `shakespeare-alt-endings` folder, follow the usage guide below to run the project. Please understand that it may take up to a few minutes to run this program depending on your CPU specifications.
 
 ## Usage
 
