@@ -44,9 +44,9 @@ I used PySimpleGUI to create the GUI for this app.
 
 4. Run the applicable command below to install required packages:
 
-`pip3 install -r requirements.txt` (MacOS or Windows)
+    `pip3 install -r requirements.txt` (MacOS or Windows)
 
-`pip3 install -r requirements-linux.txt` (Linux)
+    `pip3 install -r requirements-linux.txt` (Linux)
 
 5. From inside the `shakespeare-alt-endings` folder, follow the usage guide below to run the project. Please understand that it may take up to a few minutes to run this program depending on your CPU specifications.
 
