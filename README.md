@@ -36,9 +36,20 @@ I used PySimpleGUI to create the GUI for this app.
 
     If Python 3 is installed you should see a message like "Python 3.x". If you see a message like "command not found", you'll want to install Python 3 at https://www.python.org/downloads/
 
-3. From inside the `sam-souhackathon2023` folder, follow the usage guide below to run the project. Please understand that it may take up to a few minutes to run this program depending on your CPU.
+3. Check that you have PIP installed on your computer. In a terminal, enter the command:
+
+    `pip3 --version`
+
+    If PIP is installed you should see a message like "pip 23.0.1" showing the version number and installation location. If you see a message like "command not found", you'll want to install PIP using the guide at https://pip.pypa.io/en/stable/installation/
+
+4. Run the applicable command below to install required packages:
+
+`pip3 install -r requirements.txt` (MacOS or Windows)
+
+`pip3 install -r requirements-linux.txt` (Linux)
+
+5. From inside the `shakespeare-alt-endings` folder, follow the usage guide below to run the project. Please understand that it may take up to a few minutes to run this program depending on your CPU specifications.
 
 ## Usage
 
-usage: `python3 main.py operating_system`
-> operating_system: `linux`, `mac`, or `windows`
+usage: `python3 main.py`
